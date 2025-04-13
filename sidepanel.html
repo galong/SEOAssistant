@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SEO Assistant</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container-fluid p-3">
+    <h1 class="text-center mb-4">SEO 文章助手</h1>
+    
+    <!-- 输入表单 -->
+    <div class="card mb-4">
+      <div class="card-header bg-primary text-white">
+        <h5 class="mb-0">输入参数</h5>
+      </div>
+      <div class="card-body">
+        <form id="seo-form">
+          <div class="mb-3">
+            <label for="target-keyword" class="form-label">目标关键词</label>
+            <input type="text" class="form-control" id="target-keyword" required>
+          </div>
+          
+          <div class="row mb-3">
+            <div class="col">
+              <label for="language" class="form-label">语言</label>
+              <select class="form-select" id="language" required>
+                <option value="en">英文</option>
+                <option value="zh">中文</option>
+              </select>
+            </div>
+            
+            <div class="col">
+              <label for="country" class="form-label">国家/地区</label>
+              <select class="form-select" id="country" required>
+                <option value="ET">埃塞俄比亚</option>
+                <option value="KE">肯尼亚</option>
+                <option value="NG">尼日利亚</option>
+                <option value="GH">加纳</option>
+                <option value="ZA">南非</option>
+                <option value="ZW">津巴布韦</option>
+                <option value="UG">乌干达</option>
+                <option value="CN">中国</option>
+                <option value="GB">英国</option>
+                <option value="BR">巴西</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="mb-3">
+            <label for="article-length" class="form-label">文章长度 (字数)</label>
+            <input type="number" class="form-control" id="article-length" min="500" value="1000" required>
+          </div>
+          
+          <button type="submit" class="btn btn-primary w-100">开始分析</button>
+        </form>
+      </div>
+    </div>
+    
+    <!-- 加载指示器 -->
+    <div id="loading" class="text-center d-none">
+      <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">加载中...</span>
+      </div>
+      <p class="mt-2" id="loading-text">正在分析关键词...</p>
+    </div>
+    
+    <!-- 结果区域 -->
+    <div id="results" class="d-none">
+      <!-- 关键词分析 -->
+      <div class="card mb-4">
+        <div class="card-header bg-success text-white d-flex justify-content-between align-items-center">
+          <h5 class="mb-0">关键词分析</h5>
+          <button class="btn btn-sm btn-light" id="copy-keywords">复制</button>
+        </div>
+        <div class="card-body">
+          <div id="keyword-analysis" class="markdown-content"></div>
+        </div>
+      </div>
+      
+      <!-- 文章内容 -->
+      <div class="card mb-4">
+        <div class="card-header bg-success text-white d-flex justify-content-between align-items-center">
+          <h5 class="mb-0">SEO 文章</h5>
+          <button class="btn btn-sm btn-light" id="copy-article">复制</button>
+        </div>
+        <div class="card-body">
+          <div id="article-content" class="markdown-content"></div>
+        </div>
+      </div>
+      
+      <!-- 重新生成按钮 -->
+      <div class="d-grid gap-2">
+        <button class="btn btn-warning" id="regenerate">重新生成文章</button>
+        <button class="btn btn-secondary" id="new-analysis">新的分析</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- 修改脚本引用顺序 -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/marked.min.js"></script>
+  <script src="js/api-service.js" type="module"></script>
+  <script src="js/sidepanel.js"></script>
+</body>
+</html>
