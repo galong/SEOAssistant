@@ -136,6 +136,10 @@ document.addEventListener('DOMContentLoaded', () => {
         language
       );
       
+      // 保存原始的 Markdown 内容
+      originalKeywordAnalysisMarkdown = keywordAnalysis;
+      originalArticleContentMarkdown = articleContent;
+      
       // 显示结果
       keywordAnalysisContainer.innerHTML = marked.parse(keywordAnalysis);
       articleContentContainer.innerHTML = marked.parse(articleContent);
@@ -156,14 +160,14 @@ document.addEventListener('DOMContentLoaded', () => {
   
   // 复制关键词分析
   copyKeywordsBtn.addEventListener('click', () => {
-    copyToClipboard(keywordAnalysisContainer.textContent);
-    showToast('关键词分析已复制到剪贴板');
+    copyToClipboard(originalKeywordAnalysisMarkdown);
+    showToast('关键词分析已复制到剪贴板（Markdown 格式）');
   });
   
   // 复制文章内容
   copyArticleBtn.addEventListener('click', () => {
-    copyToClipboard(articleContentContainer.textContent);
-    showToast('文章内容已复制到剪贴板');
+    copyToClipboard(originalArticleContentMarkdown);
+    showToast('文章内容已复制到剪贴板（Markdown 格式）');
   });
   
   // 重新生成文章
@@ -182,6 +186,9 @@ document.addEventListener('DOMContentLoaded', () => {
         currentParams.articleLength,
         currentParams.language
       );
+      
+      // 保存原始的 Markdown 内容
+      originalArticleContentMarkdown = articleContent;
       
       // 更新文章内容
       articleContentContainer.innerHTML = marked.parse(articleContent);

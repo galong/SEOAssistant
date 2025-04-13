@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "SEO Assistant",
-  "version": "1.0",
-  "description": "帮助用户进行SEO文章创作的浏览器插件",
+  "version": "1.0.0",
+  "description": "SEO Assistant是一款强大的SEO工具，帮助用户分析关键词并生成高质量的SEO优化文章",
   "permissions": [
     "storage",
     "sidePanel",
@@ -40,5 +40,8 @@
   },
   "content_security_policy": {
     "extension_pages": "script-src 'self'; object-src 'self'"
-  }
+  },
+  "author": "SEO Assistant Team",
+  "homepage_url": "https://github.com/yourusername/seo-assistant",
+  "short_name": "SEO助手"
 }
