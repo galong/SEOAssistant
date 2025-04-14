@@ -1,4 +1,4 @@
-// SEO Assistant 侧边栏脚本
+// SEO妙笔 侧边栏脚本
 // 移除 import 语句
 // import ApiService from './api-service.js';
 
@@ -432,7 +432,7 @@ document.addEventListener('DOMContentLoaded', () => {
     toast.innerHTML = `
       <div class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
         <div class="toast-header ${bgClass} text-white">
-          <strong class="me-auto">SEO Assistant</strong>
+          <strong class="me-auto">SEO妙笔</strong>
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
         </div>
         <div class="toast-body">

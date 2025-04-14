@@ -1,4 +1,4 @@
-// SEO Assistant 设置页面脚本
+// SEO妙笔 设置页面脚本
 
 document.addEventListener('DOMContentLoaded', () => {
   // 获取DOM元素

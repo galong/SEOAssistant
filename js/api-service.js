@@ -1,4 +1,4 @@
-// SEO Assistant API服务模块
+// SEO妙笔 API服务模块
 
 /**
  * API服务类 - 处理所有外部API调用

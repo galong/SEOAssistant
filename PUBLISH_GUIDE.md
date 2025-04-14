@@ -1,6 +1,6 @@
-# SEO Assistant 发布指南
+# SEO妙笔 发布指南
 
-本文档提供了将 SEO Assistant 扩展上架到 Chrome 网上应用店的详细步骤。
+本文档提供了将 SEO妙笔 扩展上架到 Chrome 网上应用店的详细步骤。
 
 ## 准备工作
 
@@ -27,7 +27,7 @@
 
 ```bash
 # 在项目根目录下执行
-zip -r seo-assistant.zip * -x "*.git*" -x "*.DS_Store" -x "PUBLISH_GUIDE.md"
+zip -r seo-miaob.zip * -x "*.git*" -x "*.DS_Store" -x "PUBLISH_GUIDE.md"
 ```
 
 确保 ZIP 文件不包含以下内容：

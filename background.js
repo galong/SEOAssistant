@@ -1,4 +1,4 @@
-// SEO Assistant 后台脚本
+// SEO妙笔 后台脚本
 // 使用 ES 模块导入
 
 import ApiService from './js/api-service.js';
@@ -202,11 +202,11 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 
 // 日志记录函数
 function logInfo(message, data) {
-  console.log(`[SEO Assistant] ${message}`, data || '');
+  console.log(`[SEO妙笔] ${message}`, data || '');
 }
 
 function logError(message, error) {
-  console.error(`[SEO Assistant Error] ${message}`, error);
+  console.error(`[SEO妙笔 Error] ${message}`, error);
 }
 
 // 注册服务工作进程（如果需要）

@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "SEO Assistant",
+  "name": "SEO妙笔",
   "version": "1.0.0",
-  "description": "SEO Assistant是一款强大的SEO工具，帮助用户分析关键词并生成高质量的SEO优化文章",
+  "description": "SEO妙笔是一款强大的SEO工具，帮助用户分析关键词并生成高质量的SEO优化文章",
   "permissions": [
     "storage",
     "sidePanel",
@@ -21,7 +21,7 @@
     "default_path": "sidepanel.html"
   },
   "action": {
-    "default_title": "SEO Assistant",
+    "default_title": "SEO妙笔",
     "default_icon": {
       "16": "images/icon16.png",
       "48": "images/icon48.png",
@@ -41,7 +41,7 @@
   "content_security_policy": {
     "extension_pages": "script-src 'self'; object-src 'self'"
   },
-  "author": "SEO Assistant Team",
+  "author": "SEO妙笔团队",
   "homepage_url": "https://github.com/yourusername/seo-assistant",
-  "short_name": "SEO助手"
+  "short_name": "SEO妙笔"
 }
